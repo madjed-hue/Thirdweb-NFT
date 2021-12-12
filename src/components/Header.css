@@ -1,0 +1,68 @@
+.header {
+  color: #fff;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header > div {
+  margin: 10px;
+}
+.punkLogo {
+  width: 200px;
+  object-fit: contain;
+}
+.searchBar {
+  display: flex;
+  background-color: #1c1c1e;
+  flex: 1;
+  height: 50px;
+  border-radius: 50px;
+  align-items: center;
+}
+.searchIconContainer {
+  margin: 10px;
+}
+.searchInput {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #ddd;
+  width: 100%;
+  letter-spacing: 0.8px;
+  font-size: 16px;
+}
+.headerItems {
+  display: flex;
+  color: #a1a5b0;
+}
+.headerItems > p {
+  margin: 10px;
+}
+.headerActions {
+  display: flex;
+  align-items: center;
+}
+.headerActions > div {
+  margin: 10px;
+}
+.themeswitchContainer {
+  display: flex;
+  background-color: #1c1c1e;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  object-fit: contain;
+}
+.themeswitchContainer > img {
+  height: 25px;
+}
+.loginBtn {
+  background: linear-gradient(to right, #59f9b7, #66feea);
+  color: #1c1c1e;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 16px;
+}

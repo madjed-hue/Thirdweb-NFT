@@ -1,0 +1,18 @@
+.punkList {
+  cursor: pointer;
+  display: flex;
+  overflow-x: scroll;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.punkList::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.punkList {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
