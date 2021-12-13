@@ -8,16 +8,10 @@ import Banner from "./components/Banner";
 function App() {
   const [punkListData, setpunkListData] = useState([]);
   const [selectedPunk, setSelectedPunk] = useState(0);
-  const options = {
-    "Access-Control-Allow-Origin": "https://nft-web-app.herokuapp.com/",
-    "Access-Control-Allow-Headers": "https://nft-web-app.herokuapp.com/",
-    "Access-Control-Allow-Methods": "POST,GET,DELETE,PUT,OPTIONS",
-  };
+
   useEffect(() => {
     const getMyNft = async () => {
-      const openseaData = await axios.get(`${process.env.REACT_APP_API_URL}`, {
-        options,
-      });
+      const openseaData = await axios.get(`${process.env.REACT_APP_API_URL}`);
 
       const results = openseaData.data.assets;
       setpunkListData(results);
