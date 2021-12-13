@@ -10,6 +10,9 @@
   display: flex;
   align-items: center;
 }
+.leftSide {
+  flex: 1;
+}
 .header > div {
   margin: 10px;
 }
