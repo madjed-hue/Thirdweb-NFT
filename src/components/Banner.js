@@ -6,9 +6,13 @@ import "./Banner.css";
 
 const Banner = ({ selectedPunk, punkListData }) => {
   const [activePunk, setActivePunk] = useState(punkListData[0]);
+
   useEffect(() => {
-    setActivePunk(punkListData(selectedPunk));
+    setActivePunk(punkListData[selectedPunk]);
+    // console.log(setActivePunk(selectedPunk));
+    // console.log(activePunk);
   }, [punkListData, selectedPunk]);
+
   return (
     <div className="main">
       <div className="mainContent">
@@ -16,29 +20,29 @@ const Banner = ({ selectedPunk, punkListData }) => {
           <div className="punkContainer">
             <img
               className="selectedPunk"
-              src="https://nftlabs.mypinata.cloud/ipfs/bafybeigqkficum3anns36jid3dxvc4yfauyuvqjulbg43n23qxn3ce3tyu"
+              src={activePunk.image_original_url}
+              // src="https://nftlabs.mypinata.cloud/ipfs/bafybeigqkficum3anns36jid3dxvc4yfauyuvqjulbg43n23qxn3ce3tyu"
               alt=""
             />
           </div>
         </div>
         <div className="punkDetails" style={{ color: "#fff" }}>
           <div className="titleAndNumber">
-            <div className="title">Bandana Punk</div>
-            <span className="titleNumber">#3</span>
+            <div className="title">{activePunk.name}</div>
+            <span className="titleNumber">#{activePunk.token_id} </span>
           </div>
 
           <div className="owner">
             <div className="ownerImageContainer">
-              <img
-                src="https://nftlabs.mypinata.cloud/ipfs/bafybeigqkficum3anns36jid3dxvc4yfauyuvqjulbg43n23qxn3ce3tyu"
-                alt=""
-              />
+              <img src={activePunk.owner["profile_img_url"]} alt="" />
             </div>
             <div className="ownerDetails">
               <div className="ownerNameAndHandle">
                 <div className="ownerAddress">
-                  <div>0xC977BCA375275554003Fc7347Fd5be94A3De04e3</div>
-                  <div className="ownerHandle">@Madjed Beddiaf</div>
+                  <div>{activePunk.owner["address"]}</div>
+                  <div className="ownerHandle">
+                    @{activePunk.owner.user["username"]}
+                  </div>
                 </div>
               </div>
               <div className="ownerLinks">

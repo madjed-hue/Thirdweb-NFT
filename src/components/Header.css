@@ -5,6 +5,11 @@
   justify-content: space-between;
   align-items: center;
 }
+.leftSide,
+.rightSide {
+  display: flex;
+  align-items: center;
+}
 .header > div {
   margin: 10px;
 }
@@ -65,4 +70,54 @@
   border-radius: 50px;
   font-weight: 500;
   font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 150px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .leftSide,
+  .rightSide {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .header > div {
+    margin: 0 10px;
+  }
+  .punkLogo {
+    width: 190px;
+    object-fit: contain;
+  }
+  .searchBar {
+    display: flex;
+    background-color: #1c1c1e;
+    flex: 1;
+    height: 45px;
+    border-radius: 50px;
+    align-items: center;
+  }
+  .searchInput {
+    width: 90%;
+    letter-spacing: 0.7px;
+    font-size: 14px;
+  }
+  .headerItems {
+    display: flex;
+    color: #a1a5b0;
+  }
+  .headerItems > p {
+    margin: 15px;
+  }
+  .themeswitchContainer {
+    padding: 20px;
+  }
+  .themeswitchContainer > img {
+    height: 25px;
+  }
+  .loginBtn {
+    padding: 15px 45px;
+  }
 }

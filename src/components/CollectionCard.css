@@ -38,3 +38,8 @@
   margin-left: 5px;
   font-weight: 600;
 }
+@media screen and (max-width: 768px) {
+  .collectionCard {
+    margin-bottom: 15px;
+  }
+}

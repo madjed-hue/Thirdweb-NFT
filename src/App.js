@@ -20,10 +20,18 @@ function App() {
     getMyNft();
   }, []);
   return (
+    // punkListData={punkListData}
     <div className="app">
       <Header />
-      <Banner punkListData={punkListData} />
-      <PunkList punkListData={punkListData} setSelectedPunk={setSelectedPunk} />
+      {punkListData.length > 0 && (
+        <>
+          <Banner punkListData={punkListData} selectedPunk={selectedPunk} />
+          <PunkList
+            punkListData={punkListData}
+            setSelectedPunk={setSelectedPunk}
+          />
+        </>
+      )}
     </div>
   );
 }

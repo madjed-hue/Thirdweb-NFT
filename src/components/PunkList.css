@@ -16,3 +16,11 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+@media screen and (max-width: 768px) {
+  .punkList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* margin-bottom: 15px; */
+  }
+}
