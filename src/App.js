@@ -11,7 +11,9 @@ function App() {
 
   useEffect(() => {
     const getMyNft = async () => {
-      const openseaData = await axios.get(`${process.env.REACT_APP_API_URL}`);
+      const openseaData = await axios.get(`${process.env.REACT_APP_API_URL}`, {
+        headers: { "Access-Control-Allow-Origin": "*" },
+      });
 
       const results = openseaData.data.assets;
       setpunkListData(results);
