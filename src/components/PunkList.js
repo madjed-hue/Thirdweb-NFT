@@ -5,9 +5,10 @@ import "./PunkList.css";
 const PunkList = ({ punkListData, setSelectedPunk }) => {
   return (
     <div className="punkList">
-      {punkListData.map((punk) => {
+      {punkListData.map((punk, index) => {
         return (
           <div
+            key={index}
             onClick={() => {
               setSelectedPunk(punk.token_id);
             }}

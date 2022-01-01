@@ -15,15 +15,20 @@ function App() {
 
       const results = await openseaData.data.assets;
       setpunkListData(results);
+      // console.log(results);
       return results;
     };
     getMyNft();
   }, []);
+  if (!punkListData) {
+    return null;
+  }
+
   return (
     // punkListData={punkListData}
     <div className="app">
       <Header />
-      {punkListData.length > 0 ? (
+      {punkListData.length > 0 && (
         <>
           <Banner punkListData={punkListData} selectedPunk={selectedPunk} />
           <PunkList
@@ -31,8 +36,6 @@ function App() {
             setSelectedPunk={setSelectedPunk}
           />
         </>
-      ) : (
-        <></>
       )}
     </div>
   );
