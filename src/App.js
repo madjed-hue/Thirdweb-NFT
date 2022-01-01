@@ -13,9 +13,8 @@ function App() {
     const getMyNft = async () => {
       const openseaData = await axios.get(`${process.env.REACT_APP_API_URL}`);
 
-      const results = openseaData.data.assets;
+      const results = await openseaData.data.assets;
       setpunkListData(results);
-      console.log(results);
       return results;
     };
     getMyNft();
@@ -24,7 +23,7 @@ function App() {
     // punkListData={punkListData}
     <div className="app">
       <Header />
-      {punkListData.length > 0 && (
+      {punkListData.length > 0 ? (
         <>
           <Banner punkListData={punkListData} selectedPunk={selectedPunk} />
           <PunkList
@@ -32,6 +31,8 @@ function App() {
             setSelectedPunk={setSelectedPunk}
           />
         </>
+      ) : (
+        <></>
       )}
     </div>
   );

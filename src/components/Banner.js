@@ -9,8 +9,6 @@ const Banner = ({ selectedPunk, punkListData }) => {
 
   useEffect(() => {
     setActivePunk(punkListData[selectedPunk]);
-    // console.log(setActivePunk(selectedPunk));
-    // console.log(activePunk);
   }, [punkListData, selectedPunk]);
 
   return (
@@ -21,7 +19,6 @@ const Banner = ({ selectedPunk, punkListData }) => {
             <img
               className="selectedPunk"
               src={activePunk.image_original_url}
-              // src="https://nftlabs.mypinata.cloud/ipfs/bafybeigqkficum3anns36jid3dxvc4yfauyuvqjulbg43n23qxn3ce3tyu"
               alt=""
             />
           </div>
