@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const getMyNft = async () => {
       const openseaData = await axios.get(`${process.env.REACT_APP_API_URL}`, {
-        "Access-Control-Allow-Origin": `${process.env.REACT_APP_API_URL}`,
+        "Access-Control-Allow-Origin": "https://nft-react-2dd53.web.app",
         "Access-Control-Allow-Credentials": true,
       });
 
@@ -24,7 +24,7 @@ function App() {
     getMyNft();
   }, []);
   if (!punkListData) {
-    return null;
+    //
   }
 
   return (
